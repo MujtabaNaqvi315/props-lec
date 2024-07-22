@@ -8,6 +8,7 @@ function App() {
   function createCard (contact) {
     return <Card 
       key = {contact.id}
+      // id = {contact.id}
       name = {contact.name}
       imageUrl = {contact.imageUrl}
       tel = {contact.tel}

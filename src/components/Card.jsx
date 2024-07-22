@@ -6,6 +6,7 @@ function Card ({ name, imageUrl, tel, email}) {
     return (
         <div className='card'>
             <div className='top'>
+                {/* <p>{id}</p> */}
                 <h2 className='name'>{name}</h2>
                 {/* <img src={imageUrl} alt="pic" /> */}
                 <Avatar 
