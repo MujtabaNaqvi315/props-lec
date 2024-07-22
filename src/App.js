@@ -1,5 +1,6 @@
 import Card from './components/Card';
 import './App.css';
+import contacts from './contacts';
 
 function App() {
   return (
@@ -7,24 +8,22 @@ function App() {
       <h1 className='heading'>Nishan e Haider Holders</h1>
 
       <Card 
-        name="Major Aziz Bhatti"
-        imageUrl="https://allrajputathad.weebly.com/uploads/1/0/1/1/10113032/3363396.jpg"
-        tel="+123456789"
-        email="abc123@gmail.com"
+        name={contacts[0].name}
+        imageUrl={contacts[0].imageUrl}
+        tel={contacts[0].tel}
+        email={contacts[0].email}
       />
-
       <Card 
-        name="Rashid Minhas"
-        imageUrl="https://tutorials.pakshaheens.com/wp-content/uploads/2023/03/Pilot-Officer-Rashid-Minhas-150x150.jpg"
-        tel="+123456789"
-        email="abc123@gmail.com"
+        name={contacts[1].name}
+        imageUrl={contacts[1].imageUrl}
+        tel={contacts[1].tel}
+        email={contacts[1].email}
       />
-
       <Card 
-        name="Sher Khan"
-        imageUrl="https://i.pinimg.com/originals/eb/d7/53/ebd753083b6e846c7256f3cc80cf2d24.jpg"
-        tel="+123456789"
-        email="abc123@gmail.com"
+        name={contacts[2].name}
+        imageUrl={contacts[2].imageUrl}
+        tel={contacts[2].tel}
+        email={contacts[2].email}
       />
     </>
   );
