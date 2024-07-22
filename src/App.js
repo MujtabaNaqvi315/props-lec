@@ -3,18 +3,19 @@ import './App.css';
 import contacts from './contacts';
 import Avatar from './components/Avatar';
 
+function createCard (contact) {
+  return <Card 
+    key = {contact.id}
+    // id = {contact.id}
+    name = {contact.name}
+    imageUrl = {contact.imageUrl}
+    tel = {contact.tel}
+    email = {contact.email}
+  />
+}
+
 function App() {
 
-  function createCard (contact) {
-    return <Card 
-      key = {contact.id}
-      // id = {contact.id}
-      name = {contact.name}
-      imageUrl = {contact.imageUrl}
-      tel = {contact.tel}
-      email = {contact.email}
-    />
-  }
 
   return (
     <>
