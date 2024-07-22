@@ -1,13 +1,29 @@
 import Card from './components/Card';
 import './App.css';
 import contacts from './contacts';
+import Avatar from './components/Avatar';
 
 function App() {
+
+  function createCard (contact) {
+    return <Card 
+      key = {contact.id}
+      name = {contact.name}
+      imageUrl = {contact.imageUrl}
+      tel = {contact.tel}
+      email = {contact.email}
+    />
+  }
+
   return (
     <>
       <h1 className='heading'>Nishan e Haider Holders</h1>
+      <Avatar 
+        imageUrl="https://img.dunyanews.tv/images/userfiles/nishan-e-haider(1).jpg"
+      />
+      {contacts.map(createCard)}
 
-      <Card 
+      {/* <Card 
         name={contacts[0].name}
         imageUrl={contacts[0].imageUrl}
         tel={contacts[0].tel}
@@ -24,7 +40,7 @@ function App() {
         imageUrl={contacts[2].imageUrl}
         tel={contacts[2].tel}
         email={contacts[2].email}
-      />
+      /> */}
     </>
   );
 }
