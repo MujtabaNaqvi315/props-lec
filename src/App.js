@@ -3,16 +3,16 @@ import './App.css';
 import contacts from './contacts';
 import Avatar from './components/Avatar';
 
-function createCard (contact) {
-  return <Card 
-    key = {contact.id}
-    // id = {contact.id}
-    name = {contact.name}
-    imageUrl = {contact.imageUrl}
-    tel = {contact.tel}
-    email = {contact.email}
-  />
-}
+// function createCard (contact) {
+//   return <Card 
+//     key = {contact.id}
+//     // id = {contact.id}
+//     name = {contact.name}
+//     imageUrl = {contact.imageUrl}
+//     tel = {contact.tel}
+//     email = {contact.email}
+//   />
+// }
 
 function App() {
 
@@ -23,7 +23,16 @@ function App() {
       <Avatar 
         imageUrl="https://img.dunyanews.tv/images/userfiles/nishan-e-haider(1).jpg"
       />
-      {contacts.map(createCard)}
+      {/* {contacts.map(createCard)} */}
+
+      {contacts.map(contact => <Card 
+        key = {contact.id}
+        // id = {contact.id}
+        name = {contact.name}
+        imageUrl = {contact.imageUrl}
+        tel = {contact.tel}
+        email = {contact.email}  
+      />)}
 
       {/* <Card 
         name={contacts[0].name}
