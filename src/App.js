@@ -25,14 +25,16 @@ function App() {
       />
       {/* {contacts.map(createCard)} */}
 
-      {contacts.map(contact => <Card 
-        key = {contact.id}
-        // id = {contact.id}
-        name = {contact.name}
-        imageUrl = {contact.imageUrl}
-        tel = {contact.tel}
-        email = {contact.email}  
-      />)}
+      {contacts.map(contact => (
+        <Card 
+          key = {contact.id}
+          // id = {contact.id}
+          name = {contact.name}
+          imageUrl = {contact.imageUrl}
+          tel = {contact.tel}
+          email = {contact.email}  
+        />
+      ))}
 
       {/* <Card 
         name={contacts[0].name}
